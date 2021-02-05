@@ -11,13 +11,17 @@ app.listen(3001, () => {
 })
 
 app.get('/', (req, res) => {
-    res.sendFile(path.resolve(__dirname, 'index.html'));
+    res.sendFile(path.resolve(__dirname, 'pages/index.html'));
 });
 
-app.get('/over', (req, res) => {
-    res.sendFile(path.resolve(__dirname, 'over.html'));
+app.get('/about', (req, res) => {
+    res.sendFile(path.resolve(__dirname, 'pages/about.html'));
 });
 
 app.get('/contact', (req, res) => {
-    res.sendFile(path.resolve(__dirname, 'contact.html'));
+    res.sendFile(path.resolve(__dirname, 'pages/contact.html'));
+});
+
+app.get('/post', (req, res) => {
+    res.sendFile(path.resolve(__dirname, 'pages/post.html'));
 });
