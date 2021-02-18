@@ -2,7 +2,9 @@ const { SSL_OP_DONT_INSERT_EMPTY_FRAGMENTS } = require('constants');
 const express = require('express');
 const path = require('path');
 
-const app = express();
+const app = new express();
+const ejs = require('ejs');
+app.set('view engine', 'ejs');
 
 app.use(express.static('public'));
 
